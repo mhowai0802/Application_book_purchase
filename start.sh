@@ -4,6 +4,8 @@ docker-compose up -d
 
 cd ..
 
-cd model-project
+cd model
+
+npm install
 
 npm run serve
