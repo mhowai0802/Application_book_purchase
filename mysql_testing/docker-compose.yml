@@ -1,0 +1,14 @@
+services:
+  python:
+    build: ./python/
+    command: sh -c "sleep 10s ; python3 ./hello_world.py"
+    depends_on:
+      - mysql
+  mysql:
+    build: ./mysql/
+    ports:
+      - '3307:3306'
+  flask:
+    build: ./flask/
+    ports:
+      - '80:5000'
